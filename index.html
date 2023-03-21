@@ -10,9 +10,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    document.documentElement.className += " js";
+  </script>
 </head>
 
 <body>
+  <header class="header">
+    <img src="./images/logo.svg" alt="">
+    <nav class="js-menu">
+      <ul class="header-menu">
+        <li><a href="#computer">Computer</a></li>
+        <li><a href="#devices">Devices</a></li>
+        <li><a href="#supercharge">Supercharge</a></li>
+
+      </ul>
+
+    </nav>
+  </header>
 
   <div class="container">
 
@@ -33,7 +48,7 @@
         </p>
       </div>
     </main>
-    <div class="box-computer" aria-labelledby="Computer">
+    <section class="box-computer js-scroll" aria-labelledby="Computer" id="computer">
       <div class="computer-img">
         <img src="./images/image-computer.png" alt="computer">
       </div>
@@ -51,8 +66,8 @@
           <p>Retrieve any snippets from the first moment you started using the app.</p>
         </li>
       </ul>
-    </div>
-    <div class="box-devices" aria-labelledby="devices">
+    </section>
+    <section class="box-devices js-scroll" aria-labelledby="devices" id="devices">
       <div>
         <h2>Acess Clipboard anywhere</h2>
         <p>Whether you're on the go, or at your computer, you can acess all your Clipboard snippets in a few simple clicks.</p>
@@ -60,9 +75,9 @@
       <div class="devices-img">
         <img src="./images/image-devices.png" alt="">
       </div>
-    </div>
+    </section>
 
-    <div class="Supercharge" aria-labelledby="Supercharge">
+    <section class="Supercharge js-scroll" aria-labelledby="Supercharge" id="supercharge">
       <div>
         <h2> Supercharge your workflow</h2>
         <p>
@@ -88,7 +103,7 @@
           <p> Quick preview of all snippets on your Clipboard for easy acess.</p>
         </li>
       </ul>
-    </div>
+    </section>
 
 
     <ul class="partners" aria-labelledby="partners">

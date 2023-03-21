@@ -36,19 +36,68 @@ a {
   margin: 0;
   text-decoration: none;
   list-style: none;
+  color: inherit;
 }
 img {
   max-width: 100%;
   display: block;
 }
+.header {
+  max-width: 1439px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--cor-1-innerBG);
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  color: #26bba5;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.header-menu {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.header img {
+  width: 5%;
+}
+.header-menu li a {
+  padding: 5px 15px;
+  display: block;
+  position: relative;
+}
+
+.header-menu li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  background-color: #26bba5;
+  margin-top: 2px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+.header-menu li a:hover::after {
+  width: 100%;
+}
+
 .container {
   background: url(./images/bg-header-desktop.png) no-repeat,
     var(--cor-1-innerBG);
   display: grid;
-  gap: 100px;
+  gap: 150px;
   max-width: 1439px;
   margin: 0 auto;
   justify-items: center;
+  align-items: center;
 }
 .main-container {
   display: grid;
@@ -57,7 +106,7 @@ img {
   max-width: 600px;
   gap: 100px;
   margin-top: 130px;
-  align-content: center;
+  align-items: center;
 }
 .box-main {
   display: grid;
@@ -216,7 +265,7 @@ img {
   font-weight: 800;
 }
 .footer-list a:hover {
-  color: #567792;
+  color: #26bba5;
 }
 .footer-list {
   display: grid;
@@ -230,6 +279,9 @@ img {
   transform: scale(1.5);
 }
 @media (max-width: 1000px) {
+  .header {
+    flex-wrap: wrap;
+  }
   .box-computer {
     gap: 0px;
   }
@@ -252,6 +304,13 @@ img {
 }
 
 @media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header img {
+    width: 10%;
+  }
   .container {
     padding: 30px;
   }
@@ -343,4 +402,15 @@ img {
   bottom: 15px;
   right: 250px;
   image-rendering: pixelated;
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 0.5s ease;
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translateX(0);
 }
